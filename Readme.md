@@ -146,7 +146,9 @@ Open up `hello-world.js`, remember we pretty much are working with JavaScript so
 console.log('Hello World');
 ```
 
-**How do we execute this code?** Simply navigate into this folder path and run the command:
+### Executing Code
+
+ Simply navigate into this folder path and run the command:
 
 ```
 node <filename>
@@ -159,5 +161,44 @@ je12emy@pop-os:~/Documents/Hello-World$ node hello-world.js
 Hello World
 ```
 
+## Using NPM Modules
 
+We mentioned the NPM ecosystem is a great incentive for using Node. This allows us to use someone else's code in our own application and allow NPM to handle updates and dependencies it may need later on in the future. Following up on our Hello World project we will use a module named [Chalk](https://www.npmjs.com/package/chalk) which allows us to print messages in the terminal with some extra decorations.
 
+### Installing a Module
+
+We can check a module's information over at [NPM's official](https://www.npmjs.com/) website and look for a specific module we wish to use in our project, as mentioned before we will be using [Chalk](https://www.npmjs.com/package/chalk). Here we can see the official documentation for this module, to install a module navigate into the folder in your terminal and run the command:
+
+```
+npm install chalk
+```
+
+This command is always provided in the module's page, also we can shorten this command by using `i` instead of `install`
+
+```
+npm i chalk
+```
+
+ After executing this command you should see a progress bar for the installation, after this is done Chalk should be installed. Remember we `package.json` contains our dependencies, this means Chalk is now a dependency for our project and it should show up.
+
+![](/home/je12emy/Documents/Express-Basics/img/packagedep.png)
+
+Also a new file should show up named `package-lock.json`, this file is responsible for making sure the proper module version is installed when we install our dependencies.
+
+### Using Chalk
+
+To use a module, we simply import it into our application. This is done by using the `required` keyword, which imports a object exported by the node module which we installed. Then we store this object into a variable.
+
+```javascript
+const chalk = require('chalk')
+```
+
+To use chalk we simply access a function inside this object, here we will style for this console output into printing a blue message.
+
+```javascript
+console.log(chalk.blue('Hello World'));
+```
+
+This should be the output, after executing the file. 
+
+![chalk-blue message](/home/je12emy/Documents/Express-Basics/img/chalk-blue.png)
