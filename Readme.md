@@ -202,3 +202,57 @@ console.log(chalk.blue('Hello World'));
 This should be the output, after executing the file. 
 
 ![chalk-blue message](./img/chalk-blue.png)
+
+## Exporting a Module
+
+Since writing all of our code in a single file would not be maintainable in the long run, to do this we simply create and export our own modules which we can import in a separate file.
+
+Let's follow up on the Hello World project sample, we will create a separate file where we will make our functions calls. In `hello-world.js` we will create a couple of functions which will print a header and a colored message.
+
+```javascript
+const chalk = require('chalk')
+
+const blueMsg = (header,msg) =>  {
+    console.log(header, chalk.blue(msg));
+}
+
+const greenMsg = (header,msg) =>  {
+    console.log(header, chalk.green(msg));
+}
+
+const redMsg = (header,msg) => {
+    console.log(header, chalk.red(msg));
+}
+```
+
+If you are not familiar with this syntax for defining a function this is called a Arrow Function, it allows us to assign a function to a variable, this has many benefits mainly the `.this` scope in contained within this function.
+
+Now we need to export these functions, the popular way to this is exporting them all in a single object and using the `module.exports` function.
+
+```javascript
+module.exports = {
+    blueMsg,
+    greenMsg,
+    redMsg: redMsg
+}
+```
+
+As you can see we can either use the function name as a object property (known as short hand notation) or create a new property and assign the function name.
+
+Moving on, in a new file named `index.js` we will import this function and make us of this functions. When we import our own modules remember we need to access them through their file path in our project.
+
+```javascript
+const colorPrinter = require('./hello-world')
+```
+
+Now we have access to all this methods inside the `colorPrinter` variable. Let's write a little system diagnosis log.
+
+```javascript
+colorPrinter.blueMsg('System Status', 'Checking')
+colorPrinter.greenMsg('CPU', 'OK')
+colorPrinter.redMsg('RAM', 'Incompatible')
+```
+
+This is how things should look like.
+
+![indexjs output](/home/je12emy/Documents/Express-Basics/img/colorPrinter.png)
