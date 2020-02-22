@@ -201,4 +201,4 @@ console.log(chalk.blue('Hello World'));
 
 This should be the output, after executing the file. 
 
-![chalk-blue message](/home/je12emy/Documents/Express-Basics/img/chalk-blue.png)
+![chalk-blue message](./img/chalk-blue.png)
