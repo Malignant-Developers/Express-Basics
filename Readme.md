@@ -256,3 +256,10 @@ colorPrinter.redMsg('RAM', 'Incompatible')
 This is how things should look like.
 
 ![indexjs output](./img/colorPrinter.png)
+
+## Express.js
+
+With this basic knowledge we should be able to write our very own express server application,  express allows us to create a server with pretty much minimal configuration. Express is one of most popular options out there and it is compatible with many popular frameworks like React (Front-end), Jest (Unit-Testing), Apollo (GraphQL implementation). Actually many stacks written in Node use express in some way or another, the most popular options  being a MERN Stack, for Mongo, Express, React and Node.
+
+![Development of React / Node applications with the MERN ...](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fagileengine.com%2Fwordpress%2Fwp-content%2Fuploads%2F2017%2F09%2Fmern-stack.png&f=1&nofb=1)
+
