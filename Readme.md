@@ -255,4 +255,4 @@ colorPrinter.redMsg('RAM', 'Incompatible')
 
 This is how things should look like.
 
-![indexjs output](/home/je12emy/Documents/Express-Basics/img/colorPrinter.png)
+![indexjs output](./img/colorPrinter.png)
