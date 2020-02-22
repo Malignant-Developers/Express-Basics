@@ -181,7 +181,7 @@ npm i chalk
 
  After executing this command you should see a progress bar for the installation, after this is done Chalk should be installed. Remember we `package.json` contains our dependencies, this means Chalk is now a dependency for our project and it should show up.
 
-![](/home/je12emy/Documents/Express-Basics/img/packagedep.png)
+![Package screenshot](./img/packagedep.png)
 
 Also a new file should show up named `package-lock.json`, this file is responsible for making sure the proper module version is installed when we install our dependencies.
 
@@ -201,4 +201,4 @@ console.log(chalk.blue('Hello World'));
 
 This should be the output, after executing the file. 
 
-![chalk-blue message](/home/je12emy/Documents/Express-Basics/img/chalk-blue.png)
+![chalk-blue message](./img/chalk-blue.png)
