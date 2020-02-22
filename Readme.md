@@ -4,7 +4,13 @@ This is a small tutorial made for new Node.js developers, this aims to teach new
 
 [TOC]
 
+![Tutorial Header](./img/malignant-tutorial.png)
+
+
+
 ## Introduction to Node.js
+
+Before we develop our first node project we should at least learn what Node is.
 
 ### What is Node.js?
 
