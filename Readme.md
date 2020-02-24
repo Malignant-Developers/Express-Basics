@@ -263,3 +263,32 @@ With this basic knowledge we should be able to write our very own express server
 
 ![Development of React / Node applications with the MERN ...](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fagileengine.com%2Fwordpress%2Fwp-content%2Fuploads%2F2017%2F09%2Fmern-stack.png&f=1&nofb=1)
 
+### Installing Express
+
+Just as Chalk, [Express](https://www.npmjs.com/package/express) is served as a npm package. To learn Express we will be creating a new project named ,create a new folder and initiate Node in this folder. To install Express we run the command
+
+```
+npm i express
+```
+
+### Using Express
+
+To start using Express we import the package into our project and instantiate this package
+
+```javascript
+const express = require('express')
+const app = express()
+```
+
+Now we need to set up a port for our server to listed for requests. To do this we create a variable named `PORT`, then we use the function `listed` and pass in a port number and a function to be executed after the server initialization is successful.
+
+```javascript
+const PORT = 80
+app.listen(PORT, () => {
+    console.log('Express server is up!');  
+})
+```
+
+Now execute this file, and we should get the following output.
+
+![express-log](./img/express-setup.png)
