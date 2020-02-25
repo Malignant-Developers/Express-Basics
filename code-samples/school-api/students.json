@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Jeremy",
+        "age": 21,
+        "carrer": "Software Engineering"
+    },
+    {
+        "name": "Igor",
+        "age": 23,
+        "carrer": "Software Engineering"
+    },
+    {
+        "name": "David",
+        "age": 22,
+        "carrer": "Marketing"
+    },
+    {
+        "name": "Natally",
+        "age": 22,
+        "carrer": "Administration"
+    }
+]

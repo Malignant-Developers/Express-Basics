@@ -292,3 +292,65 @@ app.listen(PORT, () => {
 Now execute this file, and we should get the following output.
 
 ![express-log](./img/express-setup.png)
+
+#### Our first end-point
+
+An end-point is a certain route which our server will listening for, and after a certain HTTP protocol (GET, POST, DELETE, PUT) it will perform a certain operation. Let's create a route for the end-point `/students` which will return a list of students in a school.
+
+In every endpoint we pass in the route which we will be listening for and the function to be executed. This second function has access to two arguments: request and response. Request refers to the request for this end-point, it can contains certain data which it wishes to pass in. Response is the response the server sends back.
+
+Add this code before the `app.listen()` function.
+
+```javascript
+app.get('/students', (req, res) => {
+    res.send('Student API')
+})
+```
+
+Make sure you restart the server after creating this code, and access the server with the URL: `localhost:80/students` on your browser, do make sure you use the port number you had set up previously. You should be seeing the message "Student API" showing in your window.
+
+### Nodemon and Development Dependencies
+
+There are certain packages which are only useful for developers, [Nodemon](https://www.npmjs.com/package/nodemon) is a great example for this use case. Nodemon is a package which restarts the server whenever it detects a change in our code, while it isn't mandatory to use, it makes the work flow much easier. To install Nodemon run the command
+
+```
+npm i nodemon --save-dev
+```
+
+This will create a new object in the `package.json`
+
+![](./img/devdep.png)
+
+From here we can use
+
+```
+npm nodemon app.js
+```
+
+But we can actually simply this by using our own script which will execute the file using Nodemon. In `package.json` make the following modifications
+
+```json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  }
+```
+
+This creates a script named `dev` which uses Nodemon to execute `app.js`. To run this script we use
+
+``` 
+npm run dev
+```
+
+After running this, your output should look different.
+
+```
+> nodemon app.js
+
+[nodemon] 2.0.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching dir(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node app.js`
+Express server is up!
+```
